@@ -15,7 +15,7 @@ const DataArea = () => {
       { name: "Name", width: "10%" },
       { name: "Phone", width: "20%" },
       { name: "Email", width: "20%" },
-      { name: "DOB", width: "10%" },
+      { name: "Date of Birth", width: "10%" },
     ],
   });
 
@@ -30,7 +30,7 @@ const DataArea = () => {
       });
     }
 
-    const compareFnc = (a, b) => {
+    const compareFunc = (a, b) => {
       if (developerState.order === "ascend") {
         if (a[heading] === undefined) {
           return 1;
@@ -53,7 +53,7 @@ const DataArea = () => {
         }
       }
     };
-    const sortedUsers = developerState.filteredUsers.sort(compareFnc);
+    const sortedUsers = developerState.filteredUsers.sort(compareFunc);
 
     setDeveloperState({
       ...developerState,
