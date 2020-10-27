@@ -21,7 +21,7 @@ const DataBody = () => {
         context.developerState.filteredUsers.map(
           ({ login, name, picture, phone, email, dob }) => {
             return (
-              <tr key={login.uuid}>
+              <tr key={login.uid}>
                 <td data-th="Image" className="align-middle">
                   <img
                     src={picture.medium}
@@ -40,7 +40,7 @@ const DataBody = () => {
                     {email}
                   </a>
                 </td>
-                <td data-th="DOB" className="align-middle">
+                <td data-th="Date of Birth" className="align-middle">
                   {formatDate(dob.date)}
                 </td>
               </tr>
